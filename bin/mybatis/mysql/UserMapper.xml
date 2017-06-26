@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.ehwa.rainbird.backend.restful.v1.user.UserDAO">
+
+	<insert id="insertUser" parameterType="com.ehwa.rainbird.backend.v1.vo.UserVO">
+		insert into tb_users
+		values
+		(#{uuid},#{gender},#{birthyear},#{language},#{alarm_distance},#{alarm_type})
+	</insert>
+	
+	<select id="selectTest" resultType="com.ehwa.rainbird.backend.v1.vo.UserVO">
+		select * from tb_users
+	</select>
+
+</mapper>
